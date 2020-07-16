@@ -17,4 +17,4 @@ Ana Maria Agudelo
 
 ## Wireframes
 
-En esta sección [(clic aquí)](https://www.behance.net/gallery/100587783/TU7UHARI?tracking_source=best_of_behance) se encuentran los wireframes de las diferentes secciones del micrositio
+En esta sección [(clic aquí)](https://github.com/juanp-rojash/Proyecto-Web/tree/master/wireframes) se encuentran los wireframes de las diferentes secciones del micrositio
