@@ -1,11 +1,11 @@
 # Micrositio
 
-Descripción ....
+En este sitio encontraras información acerca de la serie After.
 
 ## Autor
 
 Ana Maria Agudelo 
-[website](https://www.behance.net/gallery/100587783/TU7UHARI?tracking_source=best_of_behance)
+[website](https://www.linkedin.com/in/ana-agudelo-b385181a7/)
 
 ## Secciones
 
@@ -17,4 +17,4 @@ Ana Maria Agudelo
 
 ## Wireframes
 
-En esta sección [(clic aquí)](https://github.com/juanp-rojash/Proyecto-Web/tree/master/wireframes) se encuentran los wireframes de las diferentes secciones del micrositio
+En esta sección [(clic aquí)](https://github.com/ana19051/Plataformas/tree/master/wireframes) se encuentran los wireframes de las diferentes secciones del micrositio
