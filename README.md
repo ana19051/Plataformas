@@ -1,6 +1,6 @@
 # Micrositio
 
-Descripción ....
+En este sitio encontraras información acerca de la serie After.
 
 ## Autor
 
