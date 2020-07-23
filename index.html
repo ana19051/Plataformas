@@ -1,0 +1,63 @@
+<!DOCTYPE hmtl>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Registro</title>
+</head>
+<body>
+	<form action="" method="post" name="f1">
+		<fieldset>
+			<legend>Registro</legend>
+
+			<div>
+				<label for="nombre">Nombre:</label>
+				<input type="text" name="nombre" id="nombre" pattern="(?=.*[a-z])(?=.*[A-Z]).{5,}" required/>
+				<title>"Ingrese el nombre completo"</title>
+			</div>
+			<div>
+				<label for="edad">Edad:</label>
+				<input type="text" name="edad" id="edad" pattern="[0-9]{1,2}">
+			</div>
+			<div>
+				<label for="correo">Correo electrónico:</label>
+				<input type="email" name="correo" id="correo" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/>
+			</div>
+			<div>
+				<label for="contraseña">Contraseña:</label>
+				<input type="password" name="pwd" id="pwd"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}" required/>
+				<title>"Ingrese contraseña minimo 5 caracteres"</title>
+			</div>
+			<div>
+				<label for="departamentos">Departamentos</label>
+				<select id="select-departamento" name="select-departamento")>
+					<option value="Click">Seleccionar</option>
+					<option value="Amazonas">Amazonas</option>
+					<option value="Antioquia">Antioquia</option>
+					<option value="Arauca">Arauca</option>
+					<option value="Atlántico">Atlantico</option>
+					<option value="Bolívar">Bolivar</option>
+					<option value="Boyacá">Boyaca</option>
+					<option value="Caldas">Caldas</option>
+					<option value="Caquetá">Caqueta</option>
+					<option value="Casanare">Casanare</option>
+					<option value="Cauca">Cauca</option>
+					<option value="Cesar">Cesar</option>
+					<option value="Chocó">Choco</option>
+					<option value="Córdoba">Cordoba</option>
+					<option value="Cundinamarca">Cundinamarca</option>
+					<option value="Guainía">Guainia</option>
+					<option value="Guaviare">Guaviare</option>
+					<option value="Huila">Huila</option>
+					<option value="Guajira">Guajira</option>
+					<option value="Magdalena">Magdalena</option>
+					<option value="Meta">Meta</option>
+				</select>
+			</div>
+			<div>
+				<label for="ciudad">Ciudad</label>
+				<select id="select-ciudad" name="select-ciudad"></select>
+			</div>
+		</fieldset>
+		<button class="btn" type="button" onclick="traer()">Registrarse</button>
+</body>
+</html>
