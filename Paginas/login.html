@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<head>
+	<meta charset = "UTF-8">
+	<link rel="stylesheet" href="../css/main.css">
+	<title>LOGIN</title>
+</head>
+<body>
+	<section class="form-login">
+		<h4>FORMULARIO DE LOGIN</h4>
+		<input class="con" type="email" name="correo" id="correo" placeholder="Ingrese el correo" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/>
+		<input class="con" type="password" name="contraseña" id="contraseña" placeholder="Ingrese la contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}" required/>
+		<input class="boton" type="submit" value="Continuar" onclick="location.href='../paginas/contenido.html'">
+</body>

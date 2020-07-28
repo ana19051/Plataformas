@@ -1,63 +1,36 @@
-<!DOCTYPE hmtl>
-<html>
+<!DOCTYPE html>
 <head>
-	<meta charset="UTF-8">
-	<title>Registro</title>
+	<meta charset = "UTF-8">
+	<link rel="stylesheet" href="css/main.css">
+	<title>FORMULARIO REGISTRO</title>
 </head>
 <body>
-	<form action="" method="post" name="f1">
-		<fieldset>
-			<legend>Registro</legend>
-
-			<div>
-				<label for="nombre">Nombre:</label>
-				<input type="text" name="nombre" id="nombre" pattern="(?=.*[a-z])(?=.*[A-Z]).{5,}" required/>
-				<title>"Ingrese el nombre completo"</title>
-			</div>
-			<div>
-				<label for="edad">Edad:</label>
-				<input type="text" name="edad" id="edad" pattern="[0-9]{1,2}">
-			</div>
-			<div>
-				<label for="correo">Correo electrónico:</label>
-				<input type="email" name="correo" id="correo" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/>
-			</div>
-			<div>
-				<label for="contraseña">Contraseña:</label>
-				<input type="password" name="pwd" id="pwd"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}" required/>
-				<title>"Ingrese contraseña minimo 5 caracteres"</title>
-			</div>
-			<div>
-				<label for="departamentos">Departamentos</label>
-				<select id="select-departamento" name="select-departamento")>
-					<option value="Click">Seleccionar</option>
-					<option value="Amazonas">Amazonas</option>
-					<option value="Antioquia">Antioquia</option>
-					<option value="Arauca">Arauca</option>
-					<option value="Atlántico">Atlantico</option>
-					<option value="Bolívar">Bolivar</option>
-					<option value="Boyacá">Boyaca</option>
-					<option value="Caldas">Caldas</option>
-					<option value="Caquetá">Caqueta</option>
-					<option value="Casanare">Casanare</option>
-					<option value="Cauca">Cauca</option>
-					<option value="Cesar">Cesar</option>
-					<option value="Chocó">Choco</option>
-					<option value="Córdoba">Cordoba</option>
-					<option value="Cundinamarca">Cundinamarca</option>
-					<option value="Guainía">Guainia</option>
-					<option value="Guaviare">Guaviare</option>
-					<option value="Huila">Huila</option>
-					<option value="Guajira">Guajira</option>
-					<option value="Magdalena">Magdalena</option>
-					<option value="Meta">Meta</option>
-				</select>
-			</div>
-			<div>
-				<label for="ciudad">Ciudad</label>
-				<select id="select-ciudad" name="select-ciudad"></select>
-			</div>
-		</fieldset>
-		<button class="btn" type="button" onclick="traer()">Registrarse</button>
+	<section class="form-registro">
+		<h4>FORMULARIO DE REGISTRO</h4>
+		<input class="con" type="text" name="nombre" id="nobre" placeholder="Ingrese su nombre completo" pattern="(?=.*[a-z])(?=.*[A-Z]).{5,}" required/>
+		<input class="con" type="text" name="edad" id="edad" placeholder="Ingrese su edad" pattern="[0-9]{1,2}" required/>
+		<select class="con" name="departamento" id="departamento" title="Departamento" onchange="eleccion()" required>
+                        <option></option>
+                        <option value="1">Amazonas</option>
+                        <option value="2">Antioquia</option>   
+                        <option value="3">Arauca</option>
+                        <option value="4">Atlantico</option>
+                        <option value="5">Bolivar</option>
+                        <option value="6">Boyaca</option>
+                        <option value="7">Caldas</option>  
+                        <option value="8">Caqueta</option>
+                        <option value="9">Nariño</option>
+                        <option value="10">Cauca</option>
+                        <option value="11">Cesar</option>
+                        <option value="12">Choco</option>
+                        <option value="13">Cordoba</option>
+                        <option value="14">Cundinamarca</option>
+                        <option value="15">Risaralda</option>
+                    </select>
+        <select class="con" id="ciudad" name="ciudad" title="Ciudades" required/></select>
+		<input class="con" type="email" name="correo" id="correo" placeholder="Ingrese el correo" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/>
+		<input class="con" type="password" name="contraseña" id="contraseña" placeholder="Ingrese la contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}" required/>
+		<input class="botones" type="submit" value="Registrar" onclick="location.href='../paginas/contenido.html'">
+		<p><a href="paginas/login.html">Ingresar con cuenta existente</a></p>
+	</section>
 </body>
-</html>
