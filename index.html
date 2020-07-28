@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <head>
 	<meta charset = "UTF-8">
+	<script src="../js/main.js"></script>
 	<link rel="stylesheet" href="css/main.css">
 	<title>FORMULARIO REGISTRO</title>
 </head>
 <body>
-	<section class="form-registro">
+	<form method="post"> <section class="form-registro">
 		<h4>FORMULARIO DE REGISTRO</h4>
-		<input class="con" type="text" name="nombre" id="nobre" placeholder="Ingrese su nombre completo" pattern="(?=.*[a-z])(?=.*[A-Z]).{5,}" required/>
+		<fieldset>
+			<input class="con" type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre completo" required pattern="(?=.*[a-z])(?=.*[A-Z]).{5,}"/>
+		</fieldset>
+		
 		<input class="con" type="text" name="edad" id="edad" placeholder="Ingrese su edad" pattern="[0-9]{1,2}" required/>
 		<select class="con" name="departamento" id="departamento" title="Departamento" onchange="eleccion()" required>
                         <option></option>
@@ -29,8 +33,11 @@
                     </select>
         <select class="con" id="ciudad" name="ciudad" title="Ciudades" required/></select>
 		<input class="con" type="email" name="correo" id="correo" placeholder="Ingrese el correo" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/>
-		<input class="con" type="password" name="contraseña" id="contraseña" placeholder="Ingrese la contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}" required/>
-		<input class="botones" type="submit" value="Registrar" onclick="location.href='../paginas/contenido.html'">
+		<input class="con" type="password" name="contraseña" id="password" placeholder="Ingrese la contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}" required/>
+		
+		<fieldset>
+			<input class="botones" type="submit" value="Registrar" onclick="location.href='paginas/contenido.html'">
 		<p><a href="paginas/login.html">Ingresar con cuenta existente</a></p>
-	</section>
+		</fieldset>
+	</form>
 </body>
