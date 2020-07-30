@@ -2,14 +2,17 @@
 <head>
 	<meta charset = "UTF-8">
 	<link rel="stylesheet" href="../css/main.css">
+	<link rel="shortcut icon" href="../img/infinitoico.ico">
 	<title>LOGIN</title>
 </head>
 <body>
-	<section class="form-login">
-	<form action="scripts/script.php" class="input-group" id="login">
-		<h4>FORMULARIO DE LOGIN</h4>
-		<input class="con" type="email" name="correo" id="correo" placeholder="Ingrese el correo" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/>
-		<input class="con" type="password" name="contraseña" id="contraseña" placeholder="Ingrese la contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}" required/>
-		<input class="boton" type="submit" value="Continuar" onclick="location.href='../paginas/contenido.html'">
-		</form>
+	<form id="form_login" action="../paginas/contenido.html" method="post"> 
+		<section class="form-login">
+		<h3>LOGIN AFTER &nbsp; &nbsp; <img heiht="20" width="50" src="../img/infinito.jpg"></h3><br>
+		<input class="con" type="email" name="correo" id="correo" placeholder="Ingrese el correo" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required />
+		<input class="con" type="password" name="contraseña" id="contraseña" placeholder="Ingrese la contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}" required />
+		<button type="submit" class="boton" href="../paginas/contenido.html">Ingresar</button>
+		<p><a href="../index.html">Registrar cuenta</a></p>
+		</section>
+	</form>
 </body>

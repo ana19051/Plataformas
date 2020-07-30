@@ -7,16 +7,24 @@ body{
 	background-image: url('../img/fondoregistro.jpg');
 	background-size: cover;
 }
+#footer
+{
+	background-color: #9EEAE2;
+	color:black;
+	clear: both;
+	text-align: center;
+	padding: 5px;
+}
 
 invalid {
 border: 2px solid #ff0000;
 }
 .form-registro{
-	width:400px;
+	width:500px;
 	background:#9EEAE2;
 	padding:30px;
 	margin:auto;
-	margin-top:100px;
+	margin-top:50px;
 	border-radius: 4px;
 	font-family:'calibri';
 	color:black;
@@ -25,8 +33,9 @@ border: 2px solid #ff0000;
 
 
 .form-registro h3{
-	font-size:222px;
+	font-size:40px;
 	margin-bottom:20px;
+	font-family:'calibri';
 }
 
 .con{
@@ -54,6 +63,25 @@ border: 2px solid #ff0000;
 	color: black;
 	text-decoration: underline;
 }
+.form-login p {
+	height: 40px;
+	text-align: center;
+	font-size: 18px;
+}
+
+.form-login a {
+	color: black;
+	text-decoration: none;
+}
+.form-login a:hover {
+	color: black;
+	text-decoration: underline;
+}
+.form-login h3{
+	font-size:40px;
+	margin-bottom:20px;
+	font-family:'calibri';
+}
 
 .form-registro .botones{
 	width: 100%;
@@ -70,7 +98,7 @@ border: 2px solid #ff0000;
 	background:#9EEAE2;
 	padding:30px;
 	margin:auto;
-	margin-top:100px;
+	margin-top:50px;
 	border-radius: 4px;
 	font-family:'calibri';
 	color:black;
@@ -84,4 +112,8 @@ border: 2px solid #ff0000;
 	color:black;
 	margin:16px 0;
 	font-size:16px;
+}
+
+.form-contacto {
+	
 }

@@ -1,43 +1,33 @@
 <!DOCTYPE html>
 <head>
 	<meta charset = "UTF-8">
-	<script src="../js/main.js"></script>
+	<script src="js/main.js"></script>
+	<link rel="shortcut icon" href="img/infinitoico.ico">
 	<link rel="stylesheet" href="css/main.css">
-	<title>FORMULARIO REGISTRO</title>
+	<title>REGISTRO</title>
+	
 </head>
 <body>
-	<form method="post"> <section class="form-registro">
-		<h4>FORMULARIO DE REGISTRO</h4>
-		<fieldset>
-			<input class="con" type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre completo" required pattern="(?=.*[a-z])(?=.*[A-Z]).{5,}"/>
-		</fieldset>
+	<form id="form-registro" action="paginas/contenido.html" method="post"> 
+		<section class="form-registro">
+		<h3>REGISTRO AFTER &nbsp; &nbsp; <img heiht="20" width="50" src="img/infinito.jpg"></h3> <br>
+		<input class="con" type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre completo" pattern="(?=.*[a-z])(?=.*[A-Z]).{5,}"required/>
 		
-		<input class="con" type="text" name="edad" id="edad" placeholder="Ingrese su edad" pattern="[0-9]{1,2}" required/>
-		<select class="con" name="departamento" id="departamento" title="Departamento" onchange="eleccion()" required>
-                        <option></option>
-                        <option value="1">Amazonas</option>
-                        <option value="2">Antioquia</option>   
-                        <option value="3">Arauca</option>
-                        <option value="4">Atlantico</option>
-                        <option value="5">Bolivar</option>
-                        <option value="6">Boyaca</option>
-                        <option value="7">Caldas</option>  
-                        <option value="8">Caqueta</option>
-                        <option value="9">Nariño</option>
-                        <option value="10">Cauca</option>
-                        <option value="11">Cesar</option>
-                        <option value="12">Choco</option>
-                        <option value="13">Cordoba</option>
-                        <option value="14">Cundinamarca</option>
-                        <option value="15">Risaralda</option>
-                    </select>
-        <select class="con" id="ciudad" name="ciudad" title="Ciudades" required/></select>
-		<input class="con" type="email" name="correo" id="correo" placeholder="Ingrese el correo" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/>
-		<input class="con" type="password" name="contraseña" id="password" placeholder="Ingrese la contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}" required/>
-		
-		<fieldset>
-			<input class="botones" type="submit" value="Registrar" onclick="location.href='paginas/contenido.html'">
+		<input class="con" type="text" name="edad" id="edad" placeholder="Ingrese su edad" pattern="[0-9]{1,2}" required />
+
+        <select class="con" name="departamento" id="departamento" onchange="cargarCiudades();" required />
+        <option value="">Departamentos</option> </select>
+         
+        <select class="con" name="ciudad" id="ciudad" required />
+        <option value="">Ciudades</option> </select>
+         
+		<input class="con" type="email" name="correo" id="correo" placeholder="Ingrese el correo" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required />
+
+		<input class="con" type="password" name="password" id="password" placeholder="Ingrese la contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}" required />
+
+		<button type="submit" class="botones" href="paginas/contenido.html">Registrar</button>
 		<p><a href="paginas/login.html">Ingresar con cuenta existente</a></p>
-		</fieldset>
+
+		</section>
 	</form>
 </body>
