@@ -1,4 +1,46 @@
+//Registro
+let pst, frm;
 
+window.onload = function () {
+  
+  frm = document.getElementById("form-registro");
+  pst = new Pristine(frm);
+  cargarDepartamentos();
+
+    frm.addEventListener('submit', function (e) {
+       e.preventDefault();
+       if(pst.validate())
+       {
+          procesar();
+       }
+       else
+       {
+        frm.classList.add("was-validated");
+       }
+    });
+    frm.addEventListener('reset', function (e) {
+      frm.classList.remove("was-validated");
+    });
+};
+
+function procesar(){
+      fetch('scripts/script.php', {
+        method: 'post',
+        body: new FormData(frm)
+      }).then(function(response) {
+        return response.json();
+      }).then(function(json){
+        guardar(json);
+      }).catch(function(err) {
+      });
+    }
+    function guardar(json){
+        localStorage.setItem("usuario",JSON.stringify(json));
+        location.href = "login.html";
+    }
+
+
+//Departamentos y ciudades
 var array = ["amazonas|Amazonas", "antioquia|Antioquia", "arauca|Arauca", "atlantico|Atlántico", "bolivar|Bolívar", "boyaca|Boyacá", "caldas|Caldas", "caqueta|Caquetá", "casanare|Casanare", "cauca|Cauca", "cesar|Cesar", "choco|Chocó", "cordoba|Córdoba", "cundinamarca|Cundinamarca", "guainia|Guainía", "guaviare|Guaviare", "huila|Huila", "guajira|La Guajira", "magdalena|Magdalena", "meta|Meta", "nariño|Nariño", "norte|Norte de Santander", "putumayo|Putumayo", "quindio|Quindío", "risaralda|Risaralda", "sanandres|San Andrés y Providencia", "santander|Santander", "sucre|Sucre", "tolima|Tolima", "valle|Valle del Cauca", "vaupes|Vaupés", "vichada|Vichada"];
 var listaCiudades = { 
   amazonas: ["Leticia", "Puerto Nari\u00f1o"],
@@ -38,6 +80,7 @@ var listaCiudades = {
 
 function cargarDepartamentos() {
   addOptions("departamento", array);
+  cargarCiudades();
 }
 
 function addOptions(domElement, array) {
@@ -46,7 +89,6 @@ function addOptions(domElement, array) {
       var pair = array[departamento].split("|");
       var opcion = document.createElement("option");
       opcion.text = array[departamento];
-      // Añadimos un value a los option para hacer mas facil escoger las ciudades
       opcion.value = pair[0];
       opcion.innerHTML = pair[1];
       selector.add(opcion);
@@ -73,5 +115,3 @@ function cargarCiudades() {
     }
     
   }
- 
-window.onload = cargarDepartamentos;

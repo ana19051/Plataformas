@@ -4,9 +4,9 @@
 	box-sizing: border-box;
 }
 
+
 body{
-	background-image: url('../img/fondoregistro.jpg');
-	background-size: cover;
+	background: #FFDEF8;	
 }
 
 #footer{
@@ -40,6 +40,7 @@ invalid {
 border: 2px solid #ff0000;
 }
 
+
 .form-registro{
 	width:500px;
 	background:#9EEAE2;
@@ -59,7 +60,7 @@ border: 2px solid #ff0000;
 	font-family:'calibri';
 }
 
-.con{
+.form-control{
 	width: 100%;
 	background: #9EEAE2;
 	padding:10px;
