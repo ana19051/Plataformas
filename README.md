@@ -4,7 +4,7 @@ En este sitio encontraras información acerca de la serie After.
 
 ## Autor
 
-Ana Maria Agudelo 
+Ana Maria Agudelo Grisales
 [website](https://www.linkedin.com/in/ana-agudelo-b385181a7/)
 
 ## Secciones
